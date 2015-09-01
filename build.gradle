@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+archivesBaseName = "dog_spark"
+version = '1.0'
+mainClassName = "Main"
+
+repositories {
+ mavenCentral()
+}
+
+dependencies {
+  compile group: 'com.sparkjava', name: 'spark-core', version: '2.1'
+  compile files("/home/real/java_apps/dog/classes")
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+}
