@@ -12,5 +12,10 @@ public class Main {
       model.put("template", "templates/dogs.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+    get("/breed", (req, res) -> {
+      HashMap model = new HashMap();
+      model.put("template", "templates/dogs.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
