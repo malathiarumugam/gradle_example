@@ -11,10 +11,15 @@ repositories {
  }
 
 appengine {
-    httpAddress = "0.0.0.0"
-    app {
-      id = 'sample-app'
+    downloadSdk = true
+    appcfg {
+        oauth2 = true
     }
+    endpoints {
+        getClientLibsOnBuild = true
+        getDiscoveryDocsOnBuild = true
+    }
+    httpAddress="0.0.0.0"
 }
 
 dependencies {
